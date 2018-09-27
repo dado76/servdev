@@ -1,0 +1,42 @@
+  table td, table th, table tr {
+        border: 1px solid #ddd;
+        text-align: center;
+
+          }
+          table tr:nth-child(even){background-color: #D0D0D0;}
+
+          table tr:hover {background-color: #F2F5A9;}
+
+          table tr {
+
+              text-align: left;
+              background-color: white;
+
+          }
+
+ #test {
+   margin-top: 10px;
+   border-width : 1px;
+   border-color : black;
+   border-style : solid;
+   margin-left: 20%;
+   margin-right: 20%;
+   padding: 10px;
+   text-align: center;
+   background: grey;
+   border-radius: 10px;
+
+   color: black;
+   font-size: 80%;
+
+
+
+ }
+ #test h1{
+
+   color: black;
+   font-size: 20px;
+
+
+
+ }
