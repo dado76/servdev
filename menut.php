@@ -16,7 +16,7 @@
 
                 </li>
                 <li class="has-subnav">
-                    <a href="sim.php">
+                    <a href="balise.php">
                   <i class="fa fa-map-marker"></i>
                         <span class="nav-text">
                           Balise
@@ -25,7 +25,7 @@
 
                 </li>
                 <li class="has-subnav">
-                    <a href="#">
+                    <a href="radio.php">
                        <i class="	fa fa-microphone fa-2x"></i>
                         <span class="nav-text">
                           Radio
@@ -34,7 +34,7 @@
 
                 </li>
                 <li class="has-subnav">
-                    <a href="#">
+                    <a href="bom.php">
                        <i class="	fa fa-truck fa-2x"></i>
                         <span class="nav-text">
                           Bom
@@ -43,7 +43,7 @@
 
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="profil.php">
                         <i class="fa fa-user fa-2x"></i>
                         <span class="nav-text">
                           Profil
@@ -51,20 +51,20 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="plan.php">
                         <i class="fa fa-map fa-2x"></i>
                         <span class="nav-text">
                            Plan
                         </span>
                     </a>
                 </li>
-          
+
 
             </ul>
 
             <ul class="logout">
                 <li>
-                   <a href="#">
+                   <a href="logout.php">
                          <i class="fa fa-power-off fa-2x"></i>
                         <span class="nav-text">
                             Logout

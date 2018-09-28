@@ -61,3 +61,36 @@ float: center;
 padding-left: 25px;
 margin-right: 25px;
 }
+#test {
+  margin-top: 10px;
+  border-width : 1px;
+  border-color : black;
+  border-style : solid;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding: 10px;
+  text-align: center;
+  background: grey;
+  border-radius: 10px;
+  background-color: #e6e6e6;
+  color: black;
+  font-size: 120%;
+
+
+
+}
+#test h1{
+
+  color: black;
+  font-size: 20px;
+
+
+
+}
+
+#test button {
+
+  	background-color: #469DB6;
+
+  }
+}
