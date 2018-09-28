@@ -27,6 +27,6 @@ error_reporting(0);
 	}
 
 	echo "<script language='javascript' type='text/javascript'>alert('Mise à jour ok!!!');</script>";
-	echo "<script language='javascript' type='text/javascript'>window.open('sim.php','_self')</script>";
+	echo "<script language='javascript' type='text/javascript'>window.open('balise.php','_self')</script>";
 
 ?>

@@ -5,5 +5,5 @@
 	$qry=$db->prepare($sql);
 	$qry->execute(array($pid));
 		echo "<script language='javascript' type='text/javascript'>alert('Balise supprimée!!')</script>";
-		echo "<script language='javascript' type='text/javascript'>window.open('simmenu.php','_self')</script>";
+		echo "<script language='javascript' type='text/javascript'>window.open('balise.php','_self')</script>";
 ?>

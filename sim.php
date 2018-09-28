@@ -106,8 +106,8 @@ $(document).ready(function() {
 <br>
 <?php include("menut.php")?>
 <center><a href="addsim.php" id="myButton" class="fancybox fancybox.ajax"><i class="fa fa-plus"><br></i><br> Ajouter</a>
-<a href="addsim.php" id="myButton" class="fancybox fancybox.ajax"><i class="fa fa-file-excel-o"><br></i><br> Excel</a>
-<a href="addsim.php" id="myButton" class="fancybox fancybox.ajax"><i class="fa fa-print"><br></i><br> Imprimer</a>
+<a href="simExport.php" id="myButton"><i class="fa fa-file-excel-o"><br></i><br> Excel</a>
+<a href="simExport.php" id="myButton"  class="fancybox fancybox.ajax" onclick="javascript:window.print()"><i class="fa fa-print"><br></i><br>Imprimer</a>
 
 
 
