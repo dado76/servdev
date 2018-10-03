@@ -49,7 +49,7 @@
                     <?php
                     $pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
                     $bdd = new PDO('mysql:host=localhost;dbname=dcr_info', 'root', '', $pdo_options);
-               $sql2 = "SELECT * FROM carte_sims WHERE LC='TERBERG'";
+               $sql2 = "SELECT * FROM carte_sims WHERE navigation='NON'";
                $req2 = $bdd->prepare($sql1);
                $req2->execute();
                $array2 = $req2->fetchALL();
@@ -60,7 +60,7 @@
         <br>
       <td> En fonction  : <td><?php  echo $nb1; ?>
         <br>
-      <td> Equipé RFID : <td> <?php  echo $nb2; ?>
+      <td> Pas de navigation : <td> <?php  echo $nb2; ?>
         <br>
         <br>
                 <button><a href="balise.php">Voir</a></button>

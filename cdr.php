@@ -16,5 +16,5 @@
 
 <div class="box a">  <?php include("menut.php")?></div>
 
-<div class="box b"><img src="https://3d.codah.fr/img/logos/logo_codah_big.jpg" width="40" height="60"><h1>Direction Collecte et recyclage</h1><<?php include("boms.php")?></div>
+<div class="box b"><img src="https://3d.codah.fr/img/logos/logo_codah_big.jpg" width="40" height="60"><h1>Direction Collecte et recyclage</h1><?php include("cdrs.php")?></div>
 </div>

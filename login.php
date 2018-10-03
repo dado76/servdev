@@ -66,5 +66,6 @@ Direction Collecte et Recyclage</p>
 </body>
 </html>
 <?php }
-//<p>Not registered yet? <a href='registration.php'>Register Here</a></p> A RAJOUTEZR DANS HTML POUR INSCRIPTION
+
 ?>
+<p>Pas encore de compte ? <a href='registration.php'>Enresgistrement ICI</a></p>

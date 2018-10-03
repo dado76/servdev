@@ -1,13 +1,17 @@
 <?php require_once ("dbconnection.php");
 	$ppid="";
-	$Num="";
-	$Codification="";
-	$NS="";
-$ETAT="";
+	$adresse="";
+$horaire="";
+$horaire_img="";
+	$equipement="";
+		$camera="";
+				$capteur_vol="";
+		$capteur_porte="";
+
 
 		if(isset($_GET['ppid'])){
 			$ppid = $_GET['ppid'];
-			$sqlLoader="Select from radio where id=?";
+			$sqlLoader="Select from cdrs where id=?";
 			$resLoader=$db->prepare($sqlLoader);
 			$resLoader->execute(array($ppid));
 	}
@@ -16,7 +20,7 @@ $ETAT="";
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Ajouter radio</title>
+<title>Ajouter une site</title>
 <style>
 .myButton {
 	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
@@ -35,7 +39,7 @@ $ETAT="";
 	border-radius:6px;
 	border:1px solid #dcdcdc;
 	display:inline-block;
-	cursor:pointer;
+	capteur_volrsor:pointer;
 	color:#777777;
 	font-family:arial;
 	font-size:15px;
@@ -61,24 +65,32 @@ $ETAT="";
 </style>
 </head>
 <?php
-	$sqladd="Select * from radio where id=?";
+	$sqladd="Select * from cdrs where id=?";
 	$resadd=$db->prepare($sqladd);
 	$resadd->execute(array($ppid));
 		while($rowadd = $resadd->fetch(PDO::FETCH_ASSOC)){
 		$pnum=$rowadd['id'];
-		$Num=$rowadd['Num'];
-		$Codification=$rowadd['Codification'];
-		$NS=$rowadd['NS'];
-$ETAT=$rowadd['ETAT'];
+		$adresse=$rowadd['adresse'];
+		$horaire=$rowadd['horaire'];
+		$horaire_img=$rowadd['horaire_img'];
+		$equipement=$rowadd['equipement'];
+		$cameras=$rowadd['cameras'];
+			$capteur_vol=$rowadd['capteur_vol'];
+$capteur_porte=$rowadd['capteur_porte'];
+
+
 	}
 ?>
-    <form method="post" name="frmStudent" action="saveradio.php">
+    <form method="post" name="frmStudent" action="savecdr.php">
     <input type="hidden" name="pid" value="<?php echo $ppid; ?>"/>
         <table>
-            <tr><td>Numéro d'appel:</td><td><input type="text" name="Num" required="required" value="<?php echo $Num; ?>"/></td></tr>
-            <tr><td>Codification:</td><td><input type="text" name="Codification"  value="<?php echo $Codification; ?>"/></td></tr>
-            <tr><td>Numéro de série:</td><td><input type="text" name="NS"  value="<?php echo $NS; ?>"/></td></tr>
-						<tr><td>Etat:</td><td><input type="text" name="ETAT" value="<?php echo $ETAT; ?>"/></td></tr>
+            <tr><td>adresse:</td><td><input type="text" name="adresse" size="200"  required="required" value="<?php echo $adresse; ?>"/></td></tr>
+            <tr><td>horaire:</td><td><input type="text" name="horaire" size="200"   value="<?php echo $horaire; ?>"/></td></tr>
+            <tr><td>horaire_img:</td><td><input type="text"name="horaire_img" size="200"  value="<?php echo $horaire_img; ?>"/></td></tr>
+						<tr><td>equipement:</td><td><input type="text" name="equipement" size="200"   value="<?php echo $equipement; ?>"/></td></tr>
+								<tr><td>camera:</td><td><input type="text" name="cameras" size="200"  value="<?php echo $cameras; ?>"/></td></tr>
+										<tr><td>capteur_vol:</td><td><input type="text" name="capteur_vol" size="200"  value="<?php echo $capteur_vol; ?>"/></td></tr>
+<tr><td>capteur_porte:</td><td><input type="text" name="capteur_porte" size="200"   value="<?php echo $capteur_porte; ?>"/></td></tr>
 
         </table>
 				<br>

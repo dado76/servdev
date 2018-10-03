@@ -6,6 +6,7 @@ error_reporting(0);
 	$Num=$_POST['Num'];
 	$Codification=$_POST['Codification'];
 	$NS=$_POST['NS'];
+	$ETAT=$_POST['ETAT'];
 
 
 
@@ -14,11 +15,11 @@ error_reporting(0);
 	if($id==null){
 			$sql="INSERT INTO radio(Num,Codification,NS)values(:Num,:Codification,:NS)";
 			$qry=$db->prepare($sql);
-			$qry->execute(array(':Num'=>$Num,':Codification'=>$Codification,':NS'=>$NS));
+			$qry->execute(array(':Num'=>$Num,':Codification'=>$Codification,':NS'=>$NS, ':ETAT'=>$ETAT));
 	}else{
-			$sql="UPDATE radio SET Num=?, Codification=?, NS=? where id=?";
+			$sql="UPDATE radio SET Num=?, Codification=?, NS=?, ETAT=? where id=?";
 			$qry=$db->prepare($sql);
-			$qry->execute(array($Num,$Codification,$NS,$id));
+			$qry->execute(array($Num,$Codification,$NS,$ETAT,$id));
 	}
 
 	echo "<script language='javascript' type='text/javascript'>alert('Mise à jour ok!!!');</script>";

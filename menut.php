@@ -16,7 +16,7 @@
 
                 </li>
                 <li class="has-subnav">
-                    <a href="balise.php">
+                    <a href="gestion_balise">
                   <i class="fa fa-map-marker"></i>
                         <span class="nav-text">
                           Balise
@@ -25,7 +25,7 @@
 
                 </li>
                 <li class="has-subnav">
-                    <a href="radio.php">
+                    <a href="gestion_radio">
                        <i class="	fa fa-microphone fa-2x"></i>
                         <span class="nav-text">
                           Radio
@@ -34,7 +34,7 @@
 
                 </li>
                 <li class="has-subnav">
-                    <a href="bom.php">
+                    <a href="gestion_bom">
                        <i class="	fa fa-truck fa-2x"></i>
                         <span class="nav-text">
                           Bom
@@ -58,6 +58,14 @@
                         </span>
                     </a>
                 </li>
+                <li>
+                    <a href="cdr.php">
+                        <i class="fa fa-file-video-o fa-2x"></i>
+                        <span class="nav-text">
+                           Video Protection
+                        </span>
+                    </a>
+                </li
 
 
             </ul>

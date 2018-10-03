@@ -65,6 +65,7 @@ while ($donnees = $reponse->fetch())
   echo "<td> $donnees[Num] </td>";
     echo "<td> $donnees[Codification] </td>";
     echo "<td> $donnees[NS] </td>";
+      echo "<td> $donnees[ETAT] </td>";
 
 
 	?>

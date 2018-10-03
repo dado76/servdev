@@ -1,0 +1,10 @@
+
+Options +FollowSymlinks
+RewriteEngine On
+RewriteRule	^gestion_bom$	bom.php	[L]
+
+RewriteEngine On
+RewriteRule	^gestion_radio$	radio.php	[L]
+
+RewriteEngine On
+RewriteRule	^gestion_balise$	balise.php	[L]

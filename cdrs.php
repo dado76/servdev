@@ -1,22 +1,27 @@
 <?php require_once ("dbconnection.php");
 	$pnum="";
-		$Num="";
-	$Codification="";
-	$NS="";
+		$adresse="";
+	$horaire="";
+	$horaire_img="";
+		$equipement="";
+			$cameras="";
+					$capteur_vol="";
+			$capteur_porte="";
 
 		if(isset($_GET['ppid'])){
 			$ppid = $_GET['ppid'];
-			$sqlLoader="Select from radio where id=?";
+			$sqlLoader="Select from cdrs where id=?";
 			$resLoader=$db->prepare($sqlLoader);
 			$resLoader->execute(array($ppid));
 			while($rowLoader = $resLoader->fetch(PDO::FETCH_ASSOC)){
 				$pnum=$rowLoader['id'];
-				$Num=$rowLoader['Num'];
-				$Codification=$rowLoader['Codification'];
-				$NS=$rowLoader['NS'];
-				$ETAT=$rowLoader['ETAT'];
-
-
+				$adresse=$rowLoader['adresse'];
+				$horaire=$rowLoader['horaire'];
+				$horaire_img=$rowLoader['horaire_img'];
+$equipement=$rowLoader['equipement'];
+$cameras=$rowLoader['cameras'];
+$capteur_vol=$rowLoader['capteur_vol'];
+$capteur_porte=$rowLoader['capteur_porte'];
 			}
 	}
 ?>
@@ -97,28 +102,32 @@ $(document).ready(function() {
 </head>
 <br>
 <?php include("menut.php")?>
-<center><a href="addradio.php" id="myButton" class="fancybox fancybox.ajax"><i class="fa fa-plus"><br></i><br> Ajouter</a>
-<a href="radioExport.php" id="myButton"><i class="fa fa-file-excel-o"><br></i><br> Excel</a>
-<a href="radioExport.php" id="myButton"  class="fancybox fancybox.ajax" onclick="javascript:window.print()"><i class="fa fa-print"><br></i><br>Imprimer</a>
-
+<center><a href="addcdr.php" id="myButton" class="fancybox fancybox.ajax"><i class="fa fa-plus"><br></i><br> Ajouter</a>
+<a href="bomExport.php" id="myButton"><i class="fa fa-file-excel-o"><br></i><br> Excel</a>
+<a href="bomExport.php" id="myButton"  class="fancybox fancybox.ajax" onclick="javascript:window.print()"><i class="fa fa-print"><br></i><br>Imprimer</a>
+<h1>Liste des sites</h1>
 
 
 
 </center>
 <br/><br/>
 <?php
-					$sql="Select * from radio";
+					$sql="Select * from cdrs";
 					$res=$db->prepare($sql);
 					$res->execute();
 					$str="<div class='demo_jui'><table cellpadding='0' cellspacing='0' border='0' class='display' id='tbl' class='jtable'>";
-					$str.="<thead><tr><th>ID</th><th>Num</th><th>Codification</th><th>NS</th><th>ETAT</th><th>Action</th></tr></thead><tbody>";
+					$str.="<thead><tr><th>ID</th><th>Centre de recyclage</th><th>horaire</th><th>Plage d'enregistrement</th><th>equipement</th><th>cameras</th><th>capteur_vol</th><th>capteur_porte</th><th>Action</th></tr></thead><tbody>";
 						while($row = $res->fetch(PDO::FETCH_ASSOC)){
 							$str.="<tr><td><center>".$row['id']."</center></td>";
-							$str.="<td>".$row['Num']."</td>";
-								$str.="<td>".$row['Codification']."</td>";
-              $str.="<td>".$row['NS']."</td>";
-							  $str.="<td>".$row['ETAT']."</td>";
-							$str.="<td><center><a class='fancybox fancybox.ajax' href='addradio.php?ppid=".$row['id']."' onclick='return update()'><img src = 'images/edit-icon.png' height='30' width='30' alt = 'edit' title = 'edit'/></a><a href='delradio.php?pid=".$row['id']."' onclick='return bura()' ><img src = 'images/edit_delete.png' height='30' width='30' alt = 'delete' title = 'delete'/></a></center></td></tr>";
+							$str.="<td>".$row['adresse']."</td>";
+								$str.="<td>".$row['horaire']."</td>";
+              $str.="<td>".$row['horaire_img']."</td>";
+							  $str.="<td>".$row['equipement']."</td>";
+								  $str.="<td>".$row['cameras']."</td>";
+									  $str.="<td>".$row['capteur_vol']."</td>";
+										  $str.="<td>".$row['capteur_porte']."</td>";
+												$str.="<td><a href".$row['img']."</a></td>";
+							$str.="<td><center><a class='fancybox fancybox.ajax' href='addcdr.php?ppid=".$row['id']."' onclick='return update()'><img src = 'images/edit-icon.png' height='30' width='30' alt = 'edit' title = 'edit'/></a><a href='delcdr.php?pid=".$row['id']."' onclick='return bura()' ><img src = 'images/edit_delete.png' height='30' width='30' alt = 'delete' title = 'delete'/></a></center></td></tr>";
 						}
 						echo $str;
 						echo "</tbody></table></div>";

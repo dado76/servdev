@@ -1,5 +1,6 @@
 html {
-background-color: #444444;
+background-color:   #212121;
+
 
 }
 .wrapper {
@@ -7,12 +8,13 @@ background-color: #444444;
 
         grid-template-columns: repeat(auto-fill, 50px ) ;
 
-        color: #444;
+        color:   #212121;
 
     }
 
     .box {
-        background-color: white;
+        background-color:  #212121;
+
         color: #fff;
 
     }
@@ -20,7 +22,7 @@ background-color: #444444;
     .a {
         grid-column: 3 / 1;
 grid-row: 1;
-background-color: #444;
+background-color:  #212121;
 
     }
 
@@ -29,7 +31,8 @@ background-color: #444;
         grid-column: 2 / 50 ;
     grid-row: 2 ;
 margin: 2%;
-background-color: #444;
+background-color:  #212121;
+
 
 
     }
@@ -41,8 +44,10 @@ float: center;
 text-align: center;
 background: grey;
 border-radius: 10px;
-background-color: #e6e6e6;
-color: black;
+background-color:  #212121;;
+
+padding: 15px;
+color: white;
 font-size: 80%;
 
     }
